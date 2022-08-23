@@ -10,7 +10,6 @@
    <div class="panel-group">
      <div class="panel panel-primary">
        <div class="panel-body">
-		
 	  <form:form action="add-employee" modelAttribute="newEmployee" method="post">
            <div class="row">
            
@@ -29,7 +28,7 @@
              <div class="col-sm-6 mb-1">
                <label class="form-label" for="dob">Date of Birth <i class="req-txt">*</i></label>
                <form:errors path="dob" cssClass="form-error"/>
-               <form:input type="date" path="dob" name="dob" cssClass="form-control" />
+               <form:input type="date" path="dob" name="dob" id="dob" cssClass="form-control"  />
              </div>
              
              <div class="col-sm-6 mb-1">

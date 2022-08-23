@@ -8,9 +8,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.mvc.validator.AgeValid;
 
 @Entity
 public class Employee {
@@ -29,6 +32,8 @@ public class Employee {
 	
 	@NotNull
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@Past
+	@AgeValid
 	private Date dob;
 	
 	@NotNull
